@@ -72,6 +72,7 @@
 
         .two-columns img {
             height: 180px;
+            border-radius: 5px;
         }
 
         h3 {
@@ -81,25 +82,14 @@
             margin-inline: 30px;
         }
 
-        .link-button {
-
-            background-color: #5923cf;
-            color: #F2f2f2;
-            text-decoration: none;
-            padding: 12px 20px;
-            font-weight: 900;
-            border-radius: 10px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, .5);
-        }
-
         h4 {
-            font-size: 19px;
+            font-size: 18px;
         }
 
         .font-text {
             margin-top: 1%;
             font-weight: 600;
-            color: var(--muted);
+            color: #999999;
             font-family: Arial, Helvetica, sans-serif;
             font-style: italic;
             font-size: 10px;
@@ -161,6 +151,11 @@
                     hsl(271deg 100% 20%) 100%);
         }
 
+        #post1 a {
+            text-decoration: none;
+            color: #212121;
+        }
+
         #post2 hr {
             width: 60%;
             border: none;
@@ -187,6 +182,11 @@
                     hsl(114deg 100% 23%) 89%,
                     hsl(110deg 100% 22%) 95%,
                     hsl(107deg 100% 20%) 100%);
+        }
+
+        #post2 a {
+            text-decoration: none;
+            color: #212121;
         }
 
         .text {
@@ -216,7 +216,7 @@
                     <table width="100%">
                         <tr>
                             <td style="padding: 0 25px 10px;">
-                                <img src="/assets/img/header.png" alt="banner" width="600" style="max-width: 100%;">
+                                <img src="assets/img/header.png" alt="banner" width="600" style="max-width: 100%;">
                             </td>
                         </tr>
                         <tr>
@@ -225,7 +225,7 @@
                                     <tr>
                                         <td id="mainLink">
                                             <a href="#" style="text-decoration: none;">
-                                                <img src="/assets/img/main.png" alt="main-post" width="550" style="max-width: 100%">
+                                                <img src="assets/img/main.png" alt="main-post" width="550" style="max-width: 100%">
                                                 <h3 style="text-align: left;">NRF 2020: conheça os top 5 assuntos do evento.</h3>
                                                 <p class="text" style="margin-inline: 30px; text-align:left; line-height: 23px; font-size: 15px;">O maior evento sobre varejo do mundo mostrando as tendências, oportunidades e inovações para o setor</p>
                                             </a>
@@ -244,13 +244,15 @@
                                             <table class="content">
                                                 <tr>
                                                     <td>
-                                                        <a href="#"><img src="/assets/img/kobe.png" width="250" alt="kobe" title="kobe">
+                                                        <a href="#"><img src="assets/img/kobe.png" width="250" alt="kobe" title="kobe">
                                                         </a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td id="post1">
-                                                        <h4>Petição para colocar Kobe Bryant no logo da NBA.</h4>
+                                                        <a href="">
+                                                            <h4>Petição para colocar Kobe Bryant no logo da NBA.</h4>
+                                                        </a>
                                                         <p class="font-text">Fonte: Daily Mail</p>
                                                         <hr>
                                                     </td>
@@ -265,12 +267,14 @@
                                             <table class="content">
                                                 <tr>
                                                     <td>
-                                                        <a href="#"><img src="/assets/img/wpp.png" width="250" alt="wpp" title="wpp"></a>
+                                                        <a href="#"><img src="assets/img/wpp.png" width="250" alt="wpp" title="wpp"></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td id="post2">
-                                                        <h4>WhatsApp terá função de pagamentos em 2020.</h4>
+                                                        <a href="#">
+                                                            <h4>WhatsApp terá função de pagamentos em 2020.</h4>
+                                                        </a>
                                                         <p class="font-text">Fonte: Proxxima</p>
                                                         <hr>
                                                     </td>
@@ -289,7 +293,7 @@
                     <table width="100%">
                         <tr>
                             <td style="padding: 22px 20px;">
-                                <a href="#"><img src="/assets/img/footer.png" alt="logo" width="260"></a>
+                                <a href="#"><img src="assets/img/footer.png" alt="logo" width="260"></a>
                             </td>
                         </tr>
                     </table>
@@ -298,7 +302,7 @@
             <tr>
                 <td>
                     <table width="100%">
-                        <p class="text copy" style="text-align: center;">Copyright &copy; Mandarin. Todos os direitos reservados. <br>
+                        <p class="text copy" style="text-align: center; font-size: 11px;">Copyright &copy; Mandarin. Todos os direitos reservados. <br>
                             Caso não deseje mais receber nossos e-mails, por favor <a href="https://jeancsf.github.io/portfolio">clique aqui</a></p>
                     </table>
                 </td>

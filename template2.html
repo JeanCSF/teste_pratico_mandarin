@@ -1,0 +1,527 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>MandaTrends: </title>
+  <style>
+    /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+    /*All the styling goes here*/
+
+    img {
+      border: none;
+      -ms-interpolation-mode: bicubic;
+      max-width: 100%;
+    }
+
+    body {
+      background-color: #f6f6f6;
+      font-family: sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: separate;
+      width: 100%;
+    }
+
+    table td {
+      font-family: sans-serif;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+    .body {
+      background-color: #f6f6f6;
+      width: 100%;
+    }
+
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      margin: 0 auto !important;
+      /* makes it centered */
+      max-width: 580px;
+      padding: 10px;
+      width: 580px;
+    }
+
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 10px;
+    }
+
+    /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+    .main {
+      background: #ffffff;
+      border-radius: 3px;
+      width: 100%;
+    }
+
+    .wrapper {
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    .footer {
+      clear: both;
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .footer td,
+    .footer p,
+    .footer span,
+    .footer a {
+      color: #999999;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .two-columns {
+      font-size: 0;
+      text-align: center;
+    }
+
+    .two-columns .column {
+      width: 100%;
+      max-width: 255px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .two-columns .last {
+      padding: 35px 0;
+    }
+
+    .two-columns .padding {
+      padding: 20px;
+    }
+
+    .two-columns .content {
+      text-align: left;
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    .two-columns img {
+      height: 125px;
+      border-radius: 5px;
+    }
+
+    #mainLink hr {
+      width: 40%;
+      border: none;
+      height: 5px;
+      float: left;
+      background: linear-gradient(55deg,
+          hsl(0deg 100% 50%) 0%,
+          hsl(354deg 100% 48%) 5%,
+          hsl(347deg 100% 47%) 11%,
+          hsl(341deg 100% 45%) 16%,
+          hsl(335deg 100% 44%) 21%,
+          hsl(328deg 100% 42%) 26%,
+          hsl(322deg 100% 41%) 32%,
+          hsl(316deg 100% 39%) 37%,
+          hsl(309deg 100% 37%) 42%,
+          hsl(303deg 100% 36%) 47%,
+          hsl(297deg 100% 34%) 53%,
+          hsl(291deg 100% 33%) 58%,
+          hsl(284deg 100% 31%) 63%,
+          hsl(278deg 100% 29%) 68%,
+          hsl(272deg 100% 28%) 74%,
+          hsl(265deg 100% 26%) 79%,
+          hsl(259deg 100% 25%) 84%,
+          hsl(253deg 100% 23%) 89%,
+          hsl(246deg 100% 22%) 95%,
+          hsl(240deg 100% 20%) 100%);
+    }
+
+    #post1 hr {
+      width: 60%;
+      border: none;
+      height: 5px;
+      float: left;
+      background: linear-gradient(55deg,
+          hsl(169deg 100% 50%) 0%,
+          hsl(174deg 100% 48%) 5%,
+          hsl(180deg 100% 47%) 11%,
+          hsl(185deg 100% 45%) 16%,
+          hsl(190deg 100% 44%) 21%,
+          hsl(196deg 100% 42%) 26%,
+          hsl(201deg 100% 41%) 32%,
+          hsl(207deg 100% 39%) 37%,
+          hsl(212deg 100% 37%) 42%,
+          hsl(217deg 100% 36%) 47%,
+          hsl(223deg 100% 34%) 53%,
+          hsl(228deg 100% 33%) 58%,
+          hsl(234deg 100% 31%) 63%,
+          hsl(239deg 100% 29%) 68%,
+          hsl(244deg 100% 28%) 74%,
+          hsl(250deg 100% 26%) 79%,
+          hsl(255deg 100% 25%) 84%,
+          hsl(260deg 100% 23%) 89%,
+          hsl(266deg 100% 22%) 95%,
+          hsl(271deg 100% 20%) 100%);
+    }
+
+    #post1 a {
+      text-decoration: none;
+      color: #212121;
+    }
+
+    #post2 hr {
+      width: 60%;
+      border: none;
+      height: 5px;
+      float: left;
+      background: linear-gradient(55deg,
+          hsl(169deg 100% 50%) 0%,
+          hsl(166deg 100% 48%) 5%,
+          hsl(162deg 100% 47%) 11%,
+          hsl(159deg 100% 45%) 16%,
+          hsl(156deg 100% 44%) 21%,
+          hsl(153deg 100% 42%) 26%,
+          hsl(149deg 100% 41%) 32%,
+          hsl(146deg 100% 39%) 37%,
+          hsl(143deg 100% 37%) 42%,
+          hsl(140deg 100% 36%) 47%,
+          hsl(136deg 100% 34%) 53%,
+          hsl(133deg 100% 33%) 58%,
+          hsl(130deg 100% 31%) 63%,
+          hsl(127deg 100% 29%) 68%,
+          hsl(123deg 100% 28%) 74%,
+          hsl(120deg 100% 26%) 79%,
+          hsl(117deg 100% 25%) 84%,
+          hsl(114deg 100% 23%) 89%,
+          hsl(110deg 100% 22%) 95%,
+          hsl(107deg 100% 20%) 100%);
+    }
+
+    #post2 a {
+      text-decoration: none;
+      color: #212121;
+    }
+
+    /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+
+    h3 {
+      font-size: 18px;
+      font-weight: 900;
+      color: #212121;
+    }
+
+    p,
+    ul,
+    ol {
+      font-family: sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+    .last {
+      margin-bottom: 0;
+    }
+
+    .first {
+      margin-top: 0;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .mt0 {
+      margin-top: 0;
+    }
+
+    .mb0 {
+      margin-bottom: 0;
+    }
+
+    .preheader {
+      color: transparent;
+      display: none;
+      height: 0;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+    }
+
+    .powered-by a {
+      text-decoration: none;
+    }
+
+    .text {
+      color: #999999;
+      font-weight: 600;
+      font-family: sans-serif;
+    }
+
+    .font-text {
+      margin-top: 1%;
+      font-weight: 600;
+      color: #999999;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      font-size: 10px;
+    }
+
+    .text a {
+      color: #999999;
+    }
+
+    .copy {
+      margin-block: 5%;
+    }
+
+    /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      hr {
+        width: 100% !important;
+      }
+
+      table.body h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
+
+      table.body p,
+      table.body td,
+      table.body span,
+      table.body a {
+        font-size: 16px !important;
+      }
+
+      table.body .wrapper,
+      table.body .article {
+        padding: 10px !important;
+      }
+
+      table.body .content {
+        padding: 0 !important;
+      }
+
+      table.body .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      table.body .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+
+      table.body .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+
+    /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <span class="preheader">Nossa seleção de conteúdos inspiradores.</span>
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+    <tr>
+      <td>&nbsp;</td>
+      <td class="container">
+        <div class="content">
+
+          <!-- START CENTERED WHITE CONTAINER -->
+          <table role="presentation" class="main">
+
+            <!-- START MAIN CONTENT AREA -->
+            <tr>
+              <td class="wrapper">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <img src="https://i.imgur.com/Xosso16.png" alt="banner" width="580" style="max-width: 100%;">
+                    <td>
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr>
+                            <td align="center">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                  <tr>
+                                    <td id="mainLink" class="padding">
+                                      <a href="#" style="text-decoration: none;">
+                                        <img src="https://i.imgur.com/EhQ8jYm.png" alt="main-post" width="550" style="max-width: 100%">
+                                        <h3>NRF 2020: conheça os top 5 assuntos do evento.</h3>
+                                        <p class="text">O maior evento sobre varejo do mundo mostrando as tendências, oportunidades e inovações para o setor</p>
+                                      </a>
+                                      <p class="font-text">Fonte: CMO ADOBE</p>
+                                      <hr>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="two-columns">
+                                      <table class="column">
+                                        <tr>
+                                          <td class="padding">
+                                            <table class="content">
+                                              <tr>
+                                                <td>
+                                                  <a href="#"><img src="https://i.imgur.com/q4Vbc8y.png" width="250" alt="kobe" title="kobe">
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td id="post1">
+                                                  <a href="">
+                                                    <h4>Petição para colocar Kobe Bryant no logo da NBA.</h4>
+                                                  </a>
+                                                  <p class="font-text">Fonte: Daily Mail</p>
+                                                  <hr>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      <table class="column">
+                                        <tr>
+                                          <td class="padding">
+                                            <table class="content">
+                                              <tr>
+                                                <td>
+                                                  <a href="#"><img src="https://i.imgur.com/Dso9JHm.png" width="250" alt="wpp" title="wpp"></a>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td id="post2">
+                                                  <a href="#">
+                                                    <h4>WhatsApp terá função de pagamentos em 2020.</h4>
+                                                  </a>
+                                                  <p class="font-text">Fonte: Proxxima</p>
+                                                  <hr>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  <tr>
+                    <td style="background-color: #FC4D02; text-align: center;">
+                      <table width="100%">
+                        <tr>
+                          <td style="padding: 22px 20px;">
+                            <a href="#"><img src="https://i.imgur.com/oT625EP.png" alt="logo" width="260"></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+              </td>
+            </tr>
+          </table>
+      </td>
+    </tr>
+
+    <!-- END MAIN CONTENT AREA -->
+  </table>
+  <!-- END CENTERED WHITE CONTAINER -->
+
+  <!-- START FOOTER -->
+  <div class="footer">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <table width="100%">
+            <p class="text copy" style="text-align: center; font-size: 11px;">Copyright &copy; Mandarin. Todos os direitos reservados. <br>
+              Caso não deseje mais receber nossos e-mails, por favor <a href="https://jeancsf.github.io/portfolio">clique aqui</a></p>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- END FOOTER -->
+
+  </div>
+  </td>
+  <td>&nbsp;</td>
+  </tr>
+  </table>
+</body>
+
+</html>
