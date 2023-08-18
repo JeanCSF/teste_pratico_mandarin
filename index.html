@@ -8,284 +8,303 @@
     <meta name="description" content="O MandaTrends é um report que mandamos periodicamente para nossos clientes. Uma seleção de conteúdos relevantes e inovadores para inspirar nossos clientes!">
     <title>MandaTrends: Nossa seleção de conteúdos inspiradores</title>
 </head>
+
 <head>
-    <style>
-    *,
-    *::before,
-    *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        line-height: 1.5;
-    }
-    
-    :root {
-        --orange: #FC4D02;
-        --muted: #999999;
-        --lightgrey: #F2F2F2;
-        --white: #FFFFFF;
-        --nearblack: #212121;
-    }
-    
-    .container {
-        background-color: var(--lightgrey);
-        margin: 3%;
-        padding-inline: 3%;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .inner-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: var(--white);
-    }
-    .header {
-        margin-top: 3%;
-    }
-    .header img {
-        width: 100%;
-        margin-bottom: 0;
-    }
-    
-    .main {
-        margin-inline: 5%;
-    }
-    
-    .main-post {
-        margin-bottom: 5%;
-    }
-    
-    .main-post img {
-        width: 100%;
-    }
-    
-    .main-post a {
-        text-decoration: none;
-    }
-    
-    .main-post hr {
-        width: 40%;
-        border: none;
-        border-radius: 2px;
-        height: .4rem;
-        background: linear-gradient(55deg,
-                hsl(0deg 100% 50%) 0%,
-                hsl(354deg 100% 48%) 5%,
-                hsl(347deg 100% 47%) 11%,
-                hsl(341deg 100% 45%) 16%,
-                hsl(335deg 100% 44%) 21%,
-                hsl(328deg 100% 42%) 26%,
-                hsl(322deg 100% 41%) 32%,
-                hsl(316deg 100% 39%) 37%,
-                hsl(309deg 100% 37%) 42%,
-                hsl(303deg 100% 36%) 47%,
-                hsl(297deg 100% 34%) 53%,
-                hsl(291deg 100% 33%) 58%,
-                hsl(284deg 100% 31%) 63%,
-                hsl(278deg 100% 29%) 68%,
-                hsl(272deg 100% 28%) 74%,
-                hsl(265deg 100% 26%) 79%,
-                hsl(259deg 100% 25%) 84%,
-                hsl(253deg 100% 23%) 89%,
-                hsl(246deg 100% 22%) 95%,
-                hsl(240deg 100% 20%) 100%);
-        ;
-    }
-    
-    .posts-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 992px;
-        margin-inline: auto;
-    
-    }
-    
-    .posts-grid .post {
-        width: 40%;
-        margin-bottom: 2.5rem;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .posts-grid a {
-        text-decoration: none;
-    }
-    
-    .posts-grid hr {
-        width: 60%;
-        border: none;
-        height: .4rem;
-        margin-block: 5%;
-        border-radius: 2px;
-    }
-    
-    #post1 hr {
-        background: linear-gradient(
-            55deg,
-            hsl(169deg 100% 50%) 0%,
-            hsl(174deg 100% 48%) 5%,
-            hsl(180deg 100% 47%) 11%,
-            hsl(185deg 100% 45%) 16%,
-            hsl(190deg 100% 44%) 21%,
-            hsl(196deg 100% 42%) 26%,
-            hsl(201deg 100% 41%) 32%,
-            hsl(207deg 100% 39%) 37%,
-            hsl(212deg 100% 37%) 42%,
-            hsl(217deg 100% 36%) 47%,
-            hsl(223deg 100% 34%) 53%,
-            hsl(228deg 100% 33%) 58%,
-            hsl(234deg 100% 31%) 63%,
-            hsl(239deg 100% 29%) 68%,
-            hsl(244deg 100% 28%) 74%,
-            hsl(250deg 100% 26%) 79%,
-            hsl(255deg 100% 25%) 84%,
-            hsl(260deg 100% 23%) 89%,
-            hsl(266deg 100% 22%) 95%,
-            hsl(271deg 100% 20%) 100%
-          );
-    }
-    
-    #post2 hr {
-        background: linear-gradient(
-            55deg,
-            hsl(169deg 100% 50%) 0%,
-            hsl(166deg 100% 48%) 5%,
-            hsl(162deg 100% 47%) 11%,
-            hsl(159deg 100% 45%) 16%,
-            hsl(156deg 100% 44%) 21%,
-            hsl(153deg 100% 42%) 26%,
-            hsl(149deg 100% 41%) 32%,
-            hsl(146deg 100% 39%) 37%,
-            hsl(143deg 100% 37%) 42%,
-            hsl(140deg 100% 36%) 47%,
-            hsl(136deg 100% 34%) 53%,
-            hsl(133deg 100% 33%) 58%,
-            hsl(130deg 100% 31%) 63%,
-            hsl(127deg 100% 29%) 68%,
-            hsl(123deg 100% 28%) 74%,
-            hsl(120deg 100% 26%) 79%,
-            hsl(117deg 100% 25%) 84%,
-            hsl(114deg 100% 23%) 89%,
-            hsl(110deg 100% 22%) 95%,
-            hsl(107deg 100% 20%) 100%
-          );;
-    }
-    
-    .footer div {
-        display: flex;
-        justify-content: center;
-        background-color: var(--orange);
-    }
-    
-    .text {
-        color: var(--muted);
-        font-weight: 600;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    .call-text {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.4rem;
-        font-weight: 900;
-        color: var(--nearblack);
-    
-    }
-    
-    .posts-call-text {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        font-weight: 900;
-        color: var(--nearblack);
-    
-    }
-    
-    .font-text {
-        margin-top: 1%;
-        font-weight: 600;
-        color: var(--muted);
-        font-family: Arial, Helvetica, sans-serif;
-        font-style: italic;
-        font-size: .8rem;
-    }
-    
-    .text a {
-        color: var(--muted);
-    }
-    
-    .copy {
-        margin-block: 2%;
-    }
-    
-    @media screen and (max-width: 768px) {
-        .footer img {
-            max-width: 280px;
+    <style type="text/css">
+        body {
+            margin: 0;
         }
-    
-        .text {
-            font-size: xx-small;
-            font-weight: 700;
+
+        table {
+            border-spacing: 0;
         }
-        .posts-grid .post {
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        .wrapper {
             width: 100%;
-            margin-bottom: 2.5rem;
-            display: flex;
-            flex-direction: column;
+            table-layout: fixed;
+            background-color: #F2F2F2;
+            padding-bottom: 60px;
         }
-    }
+
+        .main {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            font-family: sans-serif;
+            color: #4A4A4A;
+            box-shadow: 0 0 25px rgba(0, 0, 0, .5);
+            text-align: center;
+        }
+
+        .two-columns {
+            font-size: 0;
+            text-align: center;
+        }
+
+        .two-columns .column {
+            width: 100%;
+            max-width: 300px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .two-columns .last {
+            padding: 35px 0;
+        }
+
+        .two-columns .padding {
+            padding: 20px;
+        }
+
+        .two-columns .content {
+            text-align: left;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        .two-columns img {
+            height: 180px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 900;
+            color: #212121;
+            margin-inline: 30px;
+        }
+
+        .link-button {
+
+            background-color: #5923cf;
+            color: #F2f2f2;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: 900;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, .5);
+        }
+
+        h4 {
+            font-size: 19px;
+        }
+
+        .font-text {
+            margin-top: 1%;
+            font-weight: 600;
+            color: var(--muted);
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-size: 10px;
+        }
+
+        #mainLink hr {
+            width: 40%;
+            margin-inline: 30px;
+            border: none;
+            height: 5px;
+            background: linear-gradient(55deg,
+                    hsl(0deg 100% 50%) 0%,
+                    hsl(354deg 100% 48%) 5%,
+                    hsl(347deg 100% 47%) 11%,
+                    hsl(341deg 100% 45%) 16%,
+                    hsl(335deg 100% 44%) 21%,
+                    hsl(328deg 100% 42%) 26%,
+                    hsl(322deg 100% 41%) 32%,
+                    hsl(316deg 100% 39%) 37%,
+                    hsl(309deg 100% 37%) 42%,
+                    hsl(303deg 100% 36%) 47%,
+                    hsl(297deg 100% 34%) 53%,
+                    hsl(291deg 100% 33%) 58%,
+                    hsl(284deg 100% 31%) 63%,
+                    hsl(278deg 100% 29%) 68%,
+                    hsl(272deg 100% 28%) 74%,
+                    hsl(265deg 100% 26%) 79%,
+                    hsl(259deg 100% 25%) 84%,
+                    hsl(253deg 100% 23%) 89%,
+                    hsl(246deg 100% 22%) 95%,
+                    hsl(240deg 100% 20%) 100%);
+        }
+
+        #post1 hr {
+            width: 60%;
+            border: none;
+            height: 5px;
+            float: left;
+            background: linear-gradient(55deg,
+                    hsl(169deg 100% 50%) 0%,
+                    hsl(174deg 100% 48%) 5%,
+                    hsl(180deg 100% 47%) 11%,
+                    hsl(185deg 100% 45%) 16%,
+                    hsl(190deg 100% 44%) 21%,
+                    hsl(196deg 100% 42%) 26%,
+                    hsl(201deg 100% 41%) 32%,
+                    hsl(207deg 100% 39%) 37%,
+                    hsl(212deg 100% 37%) 42%,
+                    hsl(217deg 100% 36%) 47%,
+                    hsl(223deg 100% 34%) 53%,
+                    hsl(228deg 100% 33%) 58%,
+                    hsl(234deg 100% 31%) 63%,
+                    hsl(239deg 100% 29%) 68%,
+                    hsl(244deg 100% 28%) 74%,
+                    hsl(250deg 100% 26%) 79%,
+                    hsl(255deg 100% 25%) 84%,
+                    hsl(260deg 100% 23%) 89%,
+                    hsl(266deg 100% 22%) 95%,
+                    hsl(271deg 100% 20%) 100%);
+        }
+
+        #post2 hr {
+            width: 60%;
+            border: none;
+            height: 5px;
+            float: left;
+            background: linear-gradient(55deg,
+                    hsl(169deg 100% 50%) 0%,
+                    hsl(166deg 100% 48%) 5%,
+                    hsl(162deg 100% 47%) 11%,
+                    hsl(159deg 100% 45%) 16%,
+                    hsl(156deg 100% 44%) 21%,
+                    hsl(153deg 100% 42%) 26%,
+                    hsl(149deg 100% 41%) 32%,
+                    hsl(146deg 100% 39%) 37%,
+                    hsl(143deg 100% 37%) 42%,
+                    hsl(140deg 100% 36%) 47%,
+                    hsl(136deg 100% 34%) 53%,
+                    hsl(133deg 100% 33%) 58%,
+                    hsl(130deg 100% 31%) 63%,
+                    hsl(127deg 100% 29%) 68%,
+                    hsl(123deg 100% 28%) 74%,
+                    hsl(120deg 100% 26%) 79%,
+                    hsl(117deg 100% 25%) 84%,
+                    hsl(114deg 100% 23%) 89%,
+                    hsl(110deg 100% 22%) 95%,
+                    hsl(107deg 100% 20%) 100%);
+        }
+
+        .text {
+            color: #999999;
+            font-weight: 600;
+            font-family: sans-serif;
+        }
+
+        .text a {
+            color: #999999;
+        }
+
+        .copy {
+            margin-block: 5%;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="inner-container">
-            <header class="header">
-                <div>
-                    <img src="/assets/img/header_banner.png" alt="banner">
-                </div>
-            </header>
-            <main class="main">
-                <div class="main-post">
-                    <a href="https://jeancsf.github.io/portfolio">
-                        <img src="/assets/img/main-post.png" alt="main-post">
-                        <p class="call-text">NRF 2020: conheça os top 5 assuntos do evento.</p>
-                        <p class="text">O maior evento sobre varejo do mundo mostrando as tendências, oportunidades e inovações para o setor</p>
-                        <p class="font-text">Fonte: CMO ADOBE</p>
-                    </a>
-                    <hr>
-                </div>
-                <div class="posts-grid">
-                    <div class="post" id="post1">
-                        <a href="https://jeancsf.github.io/portfolio">
-                            <img src="/assets/img/post_1.png" alt="main-post" width="270" height="200">
-                            <p class="posts-call-text">Petição para colocar Kobe Bryant no logo da NBA.</p>
-                            <p class="font-text">Fonte: Daily Mail</p>
-                        </a>
-                        <hr>
-                    </div>
-                    <div class="post" id="post2">
-                        <a href="">
-                            <img src="/assets/img/post_2.png" alt="main-post" width="270" height="200">
-                            <p class="posts-call-text">WhatsApp terá função de pagamentos em 2020.</p>
-                            <p class="font-text">Fonte: Proxxima</p>
-                        </a>
-                        <hr>
-                    </div>
-                </div>
-            </main>
-            <footer class="footer">
-                <div>
-                    <img src="/assets/img/logo_footer.png" alt="logo">
-                </div>
-            </footer>
-        </div>
-        <p class="text copy" style="text-align: center;">Copyright &copy; Mandarin. Todos os direitos reservados. <br>
-            Caso não deseje mais receber nossos e-mails, por favor <a href="https://jeancsf.github.io/portfolio">clique aqui</a></p>
-    </div>
+    <center class="wrapper">
+        <table class="main" width="100%">
+            <tr>
+                <td height="8" style="background-color: #FFFFFF;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0 4px;">
+                    <table width="100%">
+                        <tr>
+                            <td style="padding: 0 25px 10px;">
+                                <img src="/assets/img/header.png" alt="banner" width="600" style="max-width: 100%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px 15px 50px;">
+                                <table width="100%">
+                                    <tr>
+                                        <td id="mainLink">
+                                            <a href="#" style="text-decoration: none;">
+                                                <img src="/assets/img/main.png" alt="main-post" width="550" style="max-width: 100%">
+                                                <h3 style="text-align: left;">NRF 2020: conheça os top 5 assuntos do evento.</h3>
+                                                <p class="text" style="margin-inline: 30px; text-align:left; line-height: 23px; font-size: 15px;">O maior evento sobre varejo do mundo mostrando as tendências, oportunidades e inovações para o setor</p>
+                                            </a>
+                                            <p class="font-text" style="margin-inline: 30px; text-align: left;">Fonte: CMO ADOBE</p>
+                                            <hr>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="two-columns">
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="/assets/img/kobe.png" width="250" alt="kobe" title="kobe">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="post1">
+                                                        <h4>Petição para colocar Kobe Bryant no logo da NBA.</h4>
+                                                        <p class="font-text">Fonte: Daily Mail</p>
+                                                        <hr>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#"><img src="/assets/img/wpp.png" width="250" alt="wpp" title="wpp"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="post2">
+                                                        <h4>WhatsApp terá função de pagamentos em 2020.</h4>
+                                                        <p class="font-text">Fonte: Proxxima</p>
+                                                        <hr>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #FC4D02;">
+                    <table width="100%">
+                        <tr>
+                            <td style="padding: 22px 20px;">
+                                <a href="#"><img src="/assets/img/footer.png" alt="logo" width="260"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%">
+                        <p class="text copy" style="text-align: center;">Copyright &copy; Mandarin. Todos os direitos reservados. <br>
+                            Caso não deseje mais receber nossos e-mails, por favor <a href="https://jeancsf.github.io/portfolio">clique aqui</a></p>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
 </body>
 
 </html>
